@@ -65,6 +65,13 @@ component displayname="SimplyConvertCFC" {
      : arguments.case;
     return apiCall("POST", "/cases", {}, payload);
   }
+  /**
+   * @docs https://simplyconvertapiv2.docs.apiary.io/#reference/cases-resource/all-cases/list-all-cases
+   * @hint List all cases
+   */
+  public struct function listCases( struct queryParams = {} ) {
+    return apiCall("GET", "/cases", arguments.queryParams);
+  }
 
   /**
   * @docs https://simplyconvertapiv2.docs.apiary.io/#reference/cases-resource/documents/post-a-document
