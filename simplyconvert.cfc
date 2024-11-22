@@ -5,7 +5,7 @@
 */
 component displayname="SimplyConvertCFC" {
 
-  variables._simplyconvertcfc_version = "0.0.0";
+  variables._simplyconvertcfc_version = "0.0.1";
 
   public any function init(
     string apiKey       = "",
