@@ -8,6 +8,14 @@ Set the company's UUID to post to (if not posting to the company associated with
 
 Convenience method for calling `companyUuid()`.
 
+#### `referredFromCompanyUuid( required string referred_from_company_uuid )`
+
+Set the referred from company's UUID (required for some cases)
+
+#### `referredFromCompany( required string referred_from_company_uuid )`
+
+Convenience method for calling `referredFromCompanyUuid()`.
+
 #### `litigationId( required numeric litigation_id )`
 
 Set the litigation ID belonging to the case.

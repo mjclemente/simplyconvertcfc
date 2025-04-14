@@ -6,6 +6,7 @@
 component accessors="true" {
 
     property name="company_uuid" default="";
+    property name="referred_from_company_uuid" default="";
     property name="litigation_id" default="";
     property name="status_id" default="";
     property name="fname" default="";
@@ -82,6 +83,21 @@ component accessors="true" {
     public any function company(required string company_uuid) {
         return companyUuid(arguments.company_uuid);
     }
+
+    /**
+     * @hint Set the referred from company's UUID (required for some cases)
+     */
+    public any function referredFromCompanyUuid(required string referred_from_company_uuid) {
+      setReferred_from_company_uuid(arguments.referred_from_company_uuid);
+      return this;
+  }
+
+  /**
+   * @hint Convenience method for calling `referredFromCompanyUuid()`
+   */
+  public any function referredFromCompany(required string referred_from_company_uuid) {
+      return referredFromCompanyUuid(arguments.referred_from_company_uuid);
+  }
 
     /**
      * @hint Set the litigation ID belonging to the case.
